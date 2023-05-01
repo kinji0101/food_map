@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "menu")
-@IdClass(value = RestaurantAndMenu.class)
+@IdClass(RestaurantAndMenu.class)
 public class Menu {
 	
 	@Id
@@ -26,7 +26,10 @@ public class Menu {
 	
 	
 	@Column(name = "menu_star")
-	private Integer menustar;
+	private Integer menuStar;
+	
+	public Menu() {
+	}
 
 
 	public String getStoreName() {
@@ -59,13 +62,20 @@ public class Menu {
 	}
 
 
-	public Integer getMenustar() {
-		return menustar;
+	public Integer getMenuStar() {
+		return menuStar;
 	}
 
 
-	public void setMenustar(Integer menustar) {
-		this.menustar = menustar;
+	public void setMenuStar(Integer menuStar) {
+		this.menuStar = menuStar;
 	}
+
+
+
+
+
+
+
 
 }

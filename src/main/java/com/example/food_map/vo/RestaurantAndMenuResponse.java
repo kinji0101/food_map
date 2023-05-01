@@ -2,7 +2,9 @@ package com.example.food_map.vo;
 
 import java.util.List;
 
+import com.example.food_map.Entity.Restaurant;
 import com.example.food_map.Entity.RestaurantAndMenu;
+import com.example.food_map.Entity.responseRestAndMenu;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -19,7 +21,7 @@ public class RestaurantAndMenuResponse {
 	
 	private String city;
 	
-	private int star;
+	private double star;
 	
 	private String message;
 	
@@ -30,6 +32,12 @@ public class RestaurantAndMenuResponse {
 	private Integer price;
 	
 	private Integer menustar;
+	
+	
+
+	public RestaurantAndMenuResponse() {
+
+	}
 
 	public RestaurantAndMenu getRestaurantAndMenu() {
 		return restaurantAndMenu;
@@ -62,12 +70,13 @@ public class RestaurantAndMenuResponse {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 
-	public int getStar() {
+	public double getStar() {
 		return star;
 	}
 
-	public void setStar(int star) {
+	public void setStar(double star) {
 		this.star = star;
 	}
 
@@ -110,6 +119,40 @@ public class RestaurantAndMenuResponse {
 	public void setMenustar(Integer menustar) {
 		this.menustar = menustar;
 	}
+
+	public RestaurantAndMenuResponse(String message) {
+		super();
+		this.message = message;
+	}
+
+	public RestaurantAndMenuResponse(String id, String message) {
+		super();
+		this.id = id;
+		this.message = message;
+	}
+	
+	
+
+	public RestaurantAndMenuResponse(Integer star, String message) {
+		super();
+		this.star = star;
+		this.message = message;
+	}
+
+	public RestaurantAndMenuResponse(List<Restaurant> infoList, String string) {
+		// TODO Auto-generated constructor stub
+		this.message = string;
+	}
+
+	public RestaurantAndMenuResponse(String string, List<responseRestAndMenu> reRAML) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
+	
+	
 	
 	
 	

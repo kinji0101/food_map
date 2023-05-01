@@ -5,9 +5,14 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class RestaurantAndMenu implements Serializable{
 	
-private String storeName;
+	private String storeName;
 	
 	private String storeMenu;
+	
+	private Integer price;
+	
+	private Integer menuStar;
+		
 	
 	public  RestaurantAndMenu() {
 		
@@ -38,6 +43,29 @@ private String storeName;
 	public void setStoreMenu(String storeMenu) {
 		this.storeMenu = storeMenu;
 	}
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public Integer getMenuStar() {
+		return menuStar;
+	}
+
+	public void setMenuStar(Integer menuStar) {
+		this.menuStar = menuStar;
+	}
+
+
+
+	
+	
+
+
 	
 	
 

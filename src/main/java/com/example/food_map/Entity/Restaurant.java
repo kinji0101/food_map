@@ -17,7 +17,7 @@ public class Restaurant {
 	private String city;
 	
 	@Column(name = "star")
-	private int star;
+	private double star;
 
 	public String getId() {
 		return id;
@@ -34,12 +34,13 @@ public class Restaurant {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 
-	public int getStar() {
+	public double getStar() {
 		return star;
 	}
 
-	public void setStar(int star) {
+	public void setStar(double star) {
 		this.star = star;
 	}
 

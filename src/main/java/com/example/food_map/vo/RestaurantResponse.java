@@ -3,6 +3,7 @@ package com.example.food_map.vo;
 import java.util.List;
 
 import com.example.food_map.Entity.Restaurant;
+import com.example.food_map.Entity.responseRestAndMenu;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -16,21 +17,21 @@ public class RestaurantResponse {
 	@JsonProperty("restaurant_list")	
 	private List<Restaurant> restaurantList;
 	
-	
 	private String id;
 	
 	private String city;
 	
-	private int star;
+	private Integer star;
 	
 	private String message;
+	
+	@JsonProperty("rest_and_menu_list")
+	private List<responseRestAndMenu> rRAM;
 	
 	public  RestaurantResponse() {
 		
 	}
 	
-	
-
 	public String getId() {
 		return id;
 	}
@@ -55,17 +56,23 @@ public class RestaurantResponse {
 
 
 
-	public int getStar() {
+	public Integer getStar() {
 		return star;
 	}
 
 
 
-	public void setStar(int star) {
+	public void setStar(Integer star) {
 		this.star = star;
 	}
 
+	public List<responseRestAndMenu> getrRAM() {
+		return rRAM;
+	}
 
+	public void setrRAM(List<responseRestAndMenu> rRAM) {
+		this.rRAM = rRAM;
+	}
 
 	public Restaurant getRestaurant() {
 		return restaurant;
@@ -116,6 +123,10 @@ public class RestaurantResponse {
 		this.id = id;
 		this.message = message;
 	}
-	
 
+	public RestaurantResponse(String message, List<responseRestAndMenu> rRAM) {
+		this.message = message;
+		this.rRAM = rRAM;
+	}
+	
 }

@@ -21,6 +21,8 @@ public class RestaurantRequest {
 	
 	private String newCity;
 	
+	private int limit;
+	
 	public RestaurantRequest() {
 		
 	}
@@ -74,6 +76,16 @@ public class RestaurantRequest {
 	public void setNewCity(String newCity) {
 		this.newCity = newCity;
 	}
+
+	public int getLimit() {
+		return limit;
+	}
+
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+
+
 	
 	
 	
